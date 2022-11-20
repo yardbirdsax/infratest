@@ -22,7 +22,7 @@ require (
 	k8s.io/api v0.25.4
 	k8s.io/apimachinery v0.25.4
 	k8s.io/client-go v0.25.4
-	sigs.k8s.io/aws-iam-authenticator v0.5.3
+	sigs.k8s.io/aws-iam-authenticator v0.5.10
 	sigs.k8s.io/kind v0.11.1
 )
 
@@ -44,7 +44,7 @@ require (
 	github.com/armon/go-radix v1.0.0 // indirect
 	github.com/ashanbrown/forbidigo v1.3.0 // indirect
 	github.com/ashanbrown/makezero v1.1.1 // indirect
-	github.com/aws/aws-sdk-go v1.42.43 // indirect
+	github.com/aws/aws-sdk-go v1.44.107 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.4 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.2.0 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.2.2 // indirect
