@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/2.0.0.
   the CHANGELOG file with the version input at run time (the workflow is manually invoked whenever
   we want to generate a release).
  * Bump k8s.io/client-go from 0.23.1 to 0.25.4
+ * Bump sigs.k8s.io/aws-iam-authenticator from 0.5.3 to 0.5.10
+ * Go version has been upgraded to 1.19 due to dependency requirements.
 
 ### Added
 * A new method, `vault.AssertSecretExits`, for asserting that secrets exist in Hashicorp
