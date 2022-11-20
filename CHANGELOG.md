@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/2.0.0.
   any more. Instead, a newly created `Release` workflow will be used, which automatically updates
   the CHANGELOG file with the version input at run time (the workflow is manually invoked whenever
   we want to generate a release).
+* Bump github.com/aws/aws-sdk-go-v2/service/ec2 from 1.12.0 to 1.70.0
 
 ### Added
 * A new method, `vault.AssertSecretExits`, for asserting that secrets exist in Hashicorp
