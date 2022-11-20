@@ -7,14 +7,15 @@ jobs:
     name: Test
     runs-on: ubuntu-20.04
     steps:
-      - name: Set up Golang
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.17
       - name: Check out source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Set up Golang
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: go.mod
+          cache: true
       - uses: dangoslen/changelog-enforcer@v3
         with:
           skipLabels: dependencies
@@ -47,12 +48,13 @@ jobs:
           - 1.20.7
           - 1.19.11
     steps:
-      - name: Set up Golang
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.17
       - name: Check out source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Set up Golang
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: go.mod
+          cache: true
       - name: Run k8s integration tests
         run: make k8s-integration-test K8S_VERSION=${{ matrix.k8s_version }}
   vault_integration_test:
@@ -68,11 +70,12 @@ jobs:
           - 1.8.11
           - 1.7.10
     steps:
-      - name: Set up Golang
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.17
       - name: Check out source code
         uses: actions/checkout@v2
+      - name: Set up Golang
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: go.mod
+          cache: true
       - name: Run Vault integration tests
         run: make vault-integration-test VAULT_VERSION=${{ matrix.vault_version }}
