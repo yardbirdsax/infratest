@@ -2,7 +2,7 @@
 // See the LICENSE file for license information.
 module github.com/hbocodelabs/infratest
 
-go 1.17
+go 1.19
 
 require (
 	github.com/Storytel/gomock-matchers v1.3.0
